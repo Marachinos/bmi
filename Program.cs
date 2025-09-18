@@ -22,17 +22,21 @@
         { 
                 //Skapat en BMI-uträknare
             Console.WriteLine("Välkommen till BMI Kalkulatorn!");
-            Console.WriteLine("============================");
+            Console.WriteLine("===============================");
                 //Ange hur lång du är (i meter)
-            Console.Write("Ange hur lång du är (i meter): ");
+            Console.Write("Ange hur lång du är (i meter eller inch: ");
             double height = Convert.ToDouble(Console.ReadLine());
-            //Ange din vikt (i kilo)
-            Console.Write("Ange din vikt (i kilo): ");
-            double weight = Convert.ToDouble(Console.ReadLine());
+                //Ange enhet metric (meter) eller imperial (inch)
             Console.Write("Ange enhet metric (meter) eller imperial (inch): ");
             string unit = Console.ReadLine().ToLower();
+                //Ange din vikt (i kilo)
+            Console.Write("Ange din vikt (i kilo): ");
+            double weight = Convert.ToDouble(Console.ReadLine());
+                        
             double bmi = CalculateBMI(weight, height, unit);
+                //Skriv ut ditt BMI med två decimaler
             Console.WriteLine($"Ditt BMI är: {bmi:F2}");
+            Console.Write("================");
         }
     }
 }
