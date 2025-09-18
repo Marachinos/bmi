@@ -20,6 +20,7 @@
         }
             static void Main(string[] args)
         { 
+            //Skapat en BMI-uträknare
             Console.WriteLine("Välkommen till BMI Kalkulatorn!");
             Console.WriteLine("============================");
             Console.Write("Ange hur lång du är (i meter): ");
